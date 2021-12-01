@@ -27,5 +27,24 @@ router.get("/seed", (req, res) => {
     res.send("ok")
 })
 
+router.post("/new", (req, res) => {
+    const newCenter = Center.create(req.body);
+    res.json(newCenter);
+})
+
+
+// Read All and Read One
+
+router.get("/", async (req, res) => {
+    const findCenters = await Center.find({});
+    res.json(findCenters);
+})
+
+router.get("/:id", async (req, res) => {
+    const { id } = req.params;
+    const findCenter = await Center.findById(id)
+    res.json(findCenter);
+})
+
 
 module.exports = router;

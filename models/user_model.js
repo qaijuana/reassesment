@@ -27,3 +27,7 @@ const userSchema = Schema({
         default: false
     },
 })
+
+const User = mongoose.model("vaccination_center", userSchema);
+
+module.exports = User;
