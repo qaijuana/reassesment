@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 const center_controller = require("./controller/vaccination_center")
+const slot_controller = require("./controller/slots")
 
 const port = 4000 || process.env.PORT;
 
@@ -35,6 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/api/center", center_controller)
+app.use("api/slot", slot_controller)
 
 
 app.get("/*", (req, res) => {

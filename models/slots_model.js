@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const VaccinationCenter = require("./center_model");
 const Schema = mongoose.Schema;
 
 const slotsSchema = Schema({
@@ -9,23 +8,32 @@ const slotsSchema = Schema({
     },
     nric: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     last4: {
         type: String,
         required: true
     },
+    date_assigned: {
+        type: String
+    },
+    jab1: {
+        type: Boolean,
+        default: false
+    },
+    jab2: {
+        type:Boolean,
+        default: false
+    },
     blocks: {
         type: String,
-        required: true
+        required: true,
     },
-    // capacity: {
-    //     type: Number,
-    //     default: 3
-    // },
+    
 
 })
 
 const Slots = mongoose.model("slots", slotsSchema);
 
-module.exports = VaccinationCenter;
+module.exports = Slots;

@@ -16,12 +16,12 @@ router.get("/seed", (req, res) => {
         },
         {
             name: "Yishun Hospital",
-            vaccination_type: "Mordena",
+            vaccination_type: "Moderna",
             postalCode: "760001"
         },
         {
             name: "Orchard Polyclinic",
-            vaccination_type: "Mordena",
+            vaccination_type: "Moderna",
             postalCode: "100100"
         })
     res.send("ok")
