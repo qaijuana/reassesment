@@ -9,7 +9,6 @@ const slotsSchema = Schema({
     nric: {
         type: String,
         required: true,
-        unique: true
     },
     last4: {
         type: String,
@@ -28,8 +27,7 @@ const slotsSchema = Schema({
     },
     blocks: {
         type: String,
-        required: true,
-    },
+    }
     
 
 })

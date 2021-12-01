@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/api/center", center_controller)
-app.use("api/slot", slot_controller)
+app.use("/api/slot", slot_controller)
 
 
 app.get("/*", (req, res) => {

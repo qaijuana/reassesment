@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 // Pages
 import UserBooking from "./pages/UserBooking";
 import CenterChoice from "./pages/CenterChoice";
+import EditBooking from "./pages/EditBooking";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/book" element={<Page />} >
           <Route path="" element={<CenterChoice />} />
+          <Route path="edit/:id" element={<EditBooking/>}/>
           <Route path=":id/new" element={<UserBooking />} />
         </Route>
         <Route path="/location" element={<Page />} />
